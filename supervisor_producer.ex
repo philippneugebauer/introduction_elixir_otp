@@ -1,3 +1,6 @@
+# load file with c "supervisor_producer.ex" into iex
+# requires also loading c "genserver_consumer.ex"
+# then you can send messages with SupervisorProducer.message_consumer(5)
 defmodule SupervisorProducer do
   use Supervisor
 
