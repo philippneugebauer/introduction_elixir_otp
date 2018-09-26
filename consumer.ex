@@ -2,8 +2,10 @@ defmodule Consumer do
 
   def accept do
     receive do
-      number ->
+      {:message, number} ->
         IO.puts "received: #{number}"
+        accept()
+      _ ->
         accept()
     end
   end

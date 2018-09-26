@@ -19,16 +19,13 @@ defmodule Producer do
         Process.unregister :consumer
         send :producer, :start
         send()
-      number ->
-        send :consumer, number
-        send()
       _ ->
         send()
     end
   end
 
-  def producer_send(number) do
-    send :producer, number
+  def message_consumer(number) do
+    send :consumer, {:message, number}
   end
 
 end
