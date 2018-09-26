@@ -1,5 +1,6 @@
 # load file with c "producer.ex" into iex
 # requires also loading c "consumer.ex"
+# then you can send messages with Producer.message_consumer(5)
 defmodule Producer do
 
   def init do
