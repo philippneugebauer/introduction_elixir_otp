@@ -1,4 +1,4 @@
-a = [1, 2.0, true, false, {:ok, "success"}, fn x -> x + 1 end]
+a = [%{true: 1, false: 2.0 }, {:ok, "success"}, fn x -> x + 1 end]
 
 List.last(a).(1)
 
